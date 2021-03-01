@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Feuille Ciseaux</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .fightzone{
+            display: flex;
+            min-height: 250px;
+        }
+
+        .count{
+            display: flex;
+        }
+
+        .count p {
+            margin: auto;
+           
+        }
+        body{
+            background: url('./images/background.png') ;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container{
+            background: #524E7D;
+            min-height: 100vh;
+            box-shadow: 0 0 50px #524EB7;
+        }
+        p, h1{
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+            }
+        .fightzone img, h1{
+            animation-name: fadeIn ;
+            animation-duration: 2s;
+        }    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="fightzone text-center">
+                    <div class="col-4" id="player"></div>
+                    <div class="col-4" id="result"></div>
+                    <div class="col-4" id="bot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+            <div id="selector">
+            <button id="pierre" class="btn btn-light">Pierre</button>
+            <button id="feuille" class="btn btn-light">Feuille</button>
+            <button id="ciseaux" class="btn btn-light">Ciseau</button>
+            </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row">
+            <div class="col-12 text-center count">
+                <p id="playerCount"></p>
+                <p id="botCount"></p>
+                <p id="nulCount"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
